@@ -1,10 +1,11 @@
 @import "tailwindcss";
 
 :root {
-  --background: #F5F5F7;
-  --foreground: #0F0F0F;
-  --accent: #D4AF37;
-  --accent-orange: #FF5F1F;
+  --background: #FDFBF7;
+  --foreground: #1A1816;
+  --accent: #B2825A;
+  --accent-orange: #E66B32;
+  --coffee-cream: #F2E8DF;
 }
 
 @theme inline {
@@ -12,7 +13,7 @@
   --color-foreground: var(--foreground);
   --color-accent: var(--accent);
   --color-accent-orange: var(--accent-orange);
-  
+
   --font-sans: var(--font-inter), ui-sans-serif, system-ui;
   --font-heading: var(--font-syne), ui-sans-serif, system-ui;
   --font-serif: var(--font-playfair), ui-serif, system-ui;
@@ -21,13 +22,27 @@
   --animate-fade-in-up: fade-in-up 0.8s ease-out forwards;
 
   @keyframes blur-in {
-    from { filter: blur(10px); opacity: 0; }
-    to { filter: blur(0); opacity: 1; }
+    from {
+      filter: blur(10px);
+      opacity: 0;
+    }
+
+    to {
+      filter: blur(0);
+      opacity: 1;
+    }
   }
 
   @keyframes fade-in-up {
-    from { transform: translateY(20px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 }
 
@@ -44,7 +59,11 @@ body {
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4, .font-heading {
+h1,
+h2,
+h3,
+h4,
+.font-heading {
   font-family: var(--font-syne);
   font-weight: 800;
   letter-spacing: -0.02em;

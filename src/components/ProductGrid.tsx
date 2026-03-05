@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const products = [
     {
@@ -10,8 +11,9 @@ const products = [
         hook: "The 1-second crema.",
         description: "Just snap and pour into hot water or milk. Pocket-sized intensity for the high-altitude traveler.",
         tag: "Instant Icon",
-        color: "bg-black",
-        textColor: "text-white"
+        color: "bg-[#F5F1ED]",
+        textColor: "text-black",
+        image: "/images/snap-espresso.png"
     },
     {
         id: "cold-brew",
@@ -19,9 +21,9 @@ const products = [
         hook: "18 hours of patience.",
         description: "Smooth, bold, and ready for the pavement. Low acidity, high energy, and a finish like velvet.",
         tag: "Liquid Silk",
-        color: "bg-white",
-        textColor: "text-black",
-        border: "border border-black/10"
+        color: "bg-[#1A1816]",
+        textColor: "text-white",
+        image: "/images/cold-brew.png"
     },
     {
         id: "coffee-tubes",
@@ -29,8 +31,9 @@ const products = [
         hook: "Precision in every drop.",
         description: "The Alchemist’s blend. Concentrated shots in minimalist glass vials for those who craft their own.",
         tag: "The Alchemist Choice",
-        color: "bg-zinc-200",
-        textColor: "text-black"
+        color: "bg-[#EAE3DB]",
+        textColor: "text-black",
+        image: "/images/coffee-tube.png"
     }
 ];
 
@@ -42,29 +45,38 @@ const ProductCard = ({ product, index }: { product: typeof products[0], index: n
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: index * 0.2 }}
             whileHover={{ y: -10 }}
-            className={`group relative flex flex-col h-[500px] overflow-hidden rounded-2xl p-8 md:p-12 transition-all duration-700 ${product.color} ${product.textColor} ${product.border || ""}`}
+            className={`group relative flex flex-col h-[600px] overflow-hidden rounded-3xl p-8 md:p-12 transition-all duration-700 ${product.color} ${product.textColor}`}
         >
-            <div className="absolute top-8 left-8">
-                <span className="text-[10px] font-heading font-extrabold uppercase tracking-widest opacity-60">
+            <div className="absolute top-8 left-8 z-10">
+                <span className="text-[10px] font-heading font-extrabold uppercase tracking-[0.3em] opacity-60">
                     {product.tag}
                 </span>
             </div>
 
-            <div className="mt-20 flex-1">
-                <h3 className="font-heading text-3xl md:text-4xl mb-4 group-hover:tracking-wider transition-all duration-700 uppercase">
+            <div className="relative z-10 mt-10">
+                <h3 className="font-heading text-4xl md:text-5xl mb-4 group-hover:tracking-widest transition-all duration-700 uppercase leading-none">
                     {product.title}
                 </h3>
-                <p className="font-medium text-lg mb-6 opacity-80 leading-relaxed italic">
+                <p className="font-medium text-lg mb-6 opacity-70 italic">
                     "{product.hook}"
-                </p>
-                <p className="text-sm opacity-60 leading-loose max-w-[80%]">
-                    {product.description}
                 </p>
             </div>
 
-            <div className="absolute bottom-12 left-12">
+            <div className="relative flex-1 w-full mt-4 group-hover:scale-105 transition-transform duration-1000 ease-out">
+                <Image
+                    src={product.image}
+                    alt={product.title}
+                    fill
+                    className="object-contain object-center"
+                />
+            </div>
+
+            <div className="relative z-10 mt-8 flex items-center justify-between">
+                <p className="text-xs opacity-60 leading-relaxed max-w-[60%] font-medium">
+                    {product.description}
+                </p>
                 <button className="flex items-center gap-4 group/btn">
-                    <span className="text-xs font-heading font-extrabold uppercase tracking-[0.2em]">Shop Now</span>
+                    <span className="text-[10px] font-heading font-extrabold uppercase tracking-[0.2em]">Shop</span>
                     <div className={`w-8 h-[1px] ${product.textColor === "text-white" ? "bg-white" : "bg-black"} group-hover/btn:w-12 transition-all duration-500`} />
                 </button>
             </div>

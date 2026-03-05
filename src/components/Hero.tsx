@@ -2,39 +2,52 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const Hero = () => {
     return (
         <section className="relative h-[100svh] flex flex-col items-center justify-center overflow-hidden bg-background">
-            {/* Background Subtle Elements */}
-            <div className="absolute inset-0 opacity-20 pointer-events-none">
-                <div className="absolute top-[20%] left-[10%] w-64 h-64 bg-accent blur-[120px] rounded-full" />
-                <div className="absolute bottom-[20%] right-[10%] w-96 h-96 bg-accent-orange/30 blur-[150px] rounded-full" />
+            {/* Background Image with Overlay */}
+            <div className="absolute inset-0 z-0">
+                <Image
+                    src="/images/hero-vibe.png"
+                    alt="Coffee Vibe"
+                    fill
+                    className="object-cover opacity-40 mix-blend-multiply"
+                    priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-transparent to-background" />
+            </div>
+
+            {/* Decorative Blur Elements */}
+            <div className="absolute inset-0 opacity-30 pointer-events-none z-1">
+                <div className="absolute top-[10%] left-[5%] w-96 h-96 bg-accent/20 blur-[150px] rounded-full" />
+                <div className="absolute bottom-[10%] right-[5%] w-[30rem] h-[30rem] bg-accent-orange/10 blur-[180px] rounded-full" />
             </div>
 
             <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
                 <motion.div
-                    initial={{ opacity: 0, scale: 0.95, filter: "blur(10px)" }}
+                    initial={{ opacity: 0, scale: 0.98, filter: "blur(20px)" }}
                     animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
-                    transition={{ duration: 1.2, ease: "easeOut" }}
+                    transition={{ duration: 1.5, ease: "easeOut" }}
                     className="mb-12"
                 >
-                    <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl leading-[1.1] md:leading-[1.1] text-foreground text-balance">
+                    <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl leading-[1] md:leading-[1] text-foreground text-balance">
                         "Because the best part of your day shouldn't be a luxury—it should be a ritual held in the palm of your hand."
                     </h1>
                 </motion.div>
 
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1, delay: 0.8, ease: "easeOut" }}
+                    transition={{ duration: 1.2, delay: 1, ease: "easeOut" }}
                 >
-                    <button className="group relative px-10 py-4 bg-transparent border border-foreground/20 hover:border-foreground overflow-hidden transition-all duration-500 rounded-full">
-                        <span className="relative z-10 font-heading text-sm uppercase tracking-widest font-bold text-foreground">
+                    <button className="group relative px-12 py-5 bg-transparent border border-foreground/30 hover:border-foreground overflow-hidden transition-all duration-700 rounded-full">
+                        <span className="relative z-10 font-heading text-sm uppercase tracking-[0.3em] font-bold text-foreground">
                             Explore the Collection
                         </span>
-                        <div className="absolute inset-0 bg-foreground translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out" />
-                        <span className="absolute inset-0 z-20 flex items-center justify-center font-heading text-sm uppercase tracking-widest font-bold text-background translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out">
+                        <div className="absolute inset-0 bg-foreground translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-in-out" />
+                        <span className="absolute inset-0 z-20 flex items-center justify-center font-heading text-sm uppercase tracking-[0.3em] font-bold text-background translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-in-out">
                             Explore the Collection
                         </span>
                     </button>
