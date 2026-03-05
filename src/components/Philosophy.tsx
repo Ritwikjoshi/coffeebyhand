@@ -13,9 +13,10 @@ const Philosophy = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 1 }}
+                        className="max-w-xl lg:pr-10"
                     >
                         <span className="text-xs font-heading font-medium uppercase tracking-[0.4em] text-accent mb-8 block">Modern Rituals</span>
-                        <h2 className="text-4xl md:text-6xl lg:text-7xl font-sans font-black leading-[0.95] md:leading-[0.95] mb-12 uppercase text-balance">
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-black leading-[1] mb-12 uppercase text-balance">
                             Engineered <br />
                             <span className="opacity-40">for the</span> <br />
                             Modern Life.
