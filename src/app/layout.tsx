@@ -18,8 +18,8 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Blob Coffee | Modern Coffee Rituals",
-  description: "The best part of your day shouldn't be a luxury—it should be a ritual held in the palm of your hand.",
+  title: "Blob Coffee — Investor Pitch Deck | Seed Round ₹60 Lakhs",
+  description: "Blob Coffee is a premium single-origin concentrated cold brew designed for cafe-grade taste at home or on the go. Seed Round Pitch Deck.",
 };
 
 export default function RootLayout({
