@@ -1,26 +1,27 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight, ListOrdered } from "lucide-react";
+import { ChevronLeft, ChevronRight, Minimize2, Maximize2 } from "lucide-react";
 
 const slides = [
-    { id: "overview", title: "01 Overview" },
-    { id: "team", title: "02 The Team" },
-    { id: "problem", title: "03 The Problem" },
-    { id: "product", title: "04 Product & Specs" },
-    { id: "market", title: "05 Market & Moat" },
-    { id: "traction", title: "06 Traction" },
-    { id: "gtm", title: "07 GTM Strategy" },
-    { id: "financials", title: "08 Use of Funds" },
-    { id: "the-ask", title: "09 The Ask (₹60L)" }
+    { id: "overview", title: "Overview" },
+    { id: "team", title: "The Team" },
+    { id: "problem", title: "The Problem" },
+    { id: "product", title: "Product & Specs" },
+    { id: "market", title: "Market & Moat" },
+    { id: "traction", title: "Traction" },
+    { id: "gtm", title: "GTM Strategy" },
+    { id: "financials", title: "Use of Funds" },
+    { id: "the-ask", title: "The Ask" }
 ];
 
 export default function DeckController() {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [minimized, setMinimized] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
-            const scrollPos = window.scrollY + window.innerHeight / 3;
+            const scrollPos = window.scrollY + 250;
             for (let i = slides.length - 1; i >= 0; i--) {
                 const el = document.getElementById(slides[i].id);
                 if (el && el.offsetTop <= scrollPos) {
@@ -31,7 +32,6 @@ export default function DeckController() {
         };
 
         const handleKeyDown = (e: KeyboardEvent) => {
-            // Ignore if input/textarea is focused
             if (["INPUT", "TEXTAREA"].includes((document.activeElement as HTMLElement)?.tagName)) {
                 return;
             }
@@ -70,26 +70,42 @@ export default function DeckController() {
         }
     };
 
+    if (minimized) {
+        return (
+            <aside aria-label="Pitch deck navigation" className="fixed bottom-4 right-4 z-40">
+                <button
+                    onClick={() => setMinimized(false)}
+                    className="glass border border-black/10 rounded-full px-3 py-1.5 shadow-md flex items-center gap-1.5 text-[11px] font-heading font-semibold hover:bg-black/5 transition-all text-foreground"
+                    title="Expand slide navigator"
+                >
+                    <span className="w-2 h-2 rounded-full bg-accent" />
+                    <span>Slide {currentIndex + 1}/9</span>
+                    <Maximize2 className="w-3 h-3 text-foreground/50 ml-0.5" />
+                </button>
+            </aside>
+        );
+    }
+
     return (
-        <aside aria-label="Pitch deck navigation" className="fixed bottom-6 left-1/2 -translate-x-1/2 z-40">
-            <div className="glass border border-black/10 rounded-full px-4 py-2 shadow-xl flex items-center gap-3 text-xs font-heading">
+        <aside aria-label="Pitch deck navigation" className="fixed bottom-4 left-1/2 -translate-x-1/2 z-40 max-w-[95vw]">
+            <div className="glass border border-black/10 rounded-full px-3 py-1.5 shadow-lg flex items-center gap-2 text-xs font-heading">
                 {/* Prev Button */}
                 <button
                     onClick={() => goToSlide(Math.max(0, currentIndex - 1))}
                     disabled={currentIndex === 0}
-                    className="p-1.5 rounded-full hover:bg-black/5 disabled:opacity-30 disabled:hover:bg-transparent text-foreground transition-colors"
+                    className="p-1 rounded-full hover:bg-black/5 disabled:opacity-30 disabled:hover:bg-transparent text-foreground transition-colors"
                     aria-label="Previous Slide"
                 >
-                    <ChevronLeft className="w-4 h-4" />
+                    <ChevronLeft className="w-3.5 h-3.5" />
                 </button>
 
                 {/* Current Slide Indicator */}
-                <div className="flex items-center gap-2 px-2">
-                    <span className="font-extrabold text-foreground">
-                        {slides[currentIndex]?.title}
+                <div className="flex items-center gap-1.5 px-1 whitespace-nowrap">
+                    <span className="font-bold text-foreground text-[11px]">
+                        {String(currentIndex + 1).padStart(2, "0")} {slides[currentIndex]?.title}
                     </span>
-                    <span className="text-[10px] text-foreground/40 font-bold">
-                        ({currentIndex + 1} of {slides.length})
+                    <span className="text-[10px] text-foreground/40 font-semibold">
+                        / {String(slides.length).padStart(2, "0")}
                     </span>
                 </div>
 
@@ -97,18 +113,28 @@ export default function DeckController() {
                 <button
                     onClick={() => goToSlide(Math.min(slides.length - 1, currentIndex + 1))}
                     disabled={currentIndex === slides.length - 1}
-                    className="p-1.5 rounded-full hover:bg-black/5 disabled:opacity-30 disabled:hover:bg-transparent text-foreground transition-colors"
+                    className="p-1 rounded-full hover:bg-black/5 disabled:opacity-30 disabled:hover:bg-transparent text-foreground transition-colors"
                     aria-label="Next Slide"
                 >
-                    <ChevronRight className="w-4 h-4" />
+                    <ChevronRight className="w-3.5 h-3.5" />
                 </button>
 
-                <div className="w-[1px] h-4 bg-black/10 hidden sm:block" />
+                <div className="w-[1px] h-3 bg-black/10 hidden sm:block" />
 
                 {/* Keyboard tip indicator */}
-                <span className="text-[9px] uppercase tracking-wider text-foreground/40 font-semibold hidden sm:inline-block">
-                    Use keys [← / →]
+                <span className="text-[9px] uppercase tracking-wider text-foreground/40 font-medium hidden sm:inline-block">
+                    [← / →]
                 </span>
+
+                {/* Minimize Button */}
+                <button
+                    onClick={() => setMinimized(true)}
+                    className="p-1 rounded-full hover:bg-black/5 text-foreground/40 hover:text-foreground transition-colors ml-0.5"
+                    title="Minimize navigation bar"
+                    aria-label="Minimize navigation bar"
+                >
+                    <Minimize2 className="w-3 h-3" />
+                </button>
             </div>
         </aside>
     );

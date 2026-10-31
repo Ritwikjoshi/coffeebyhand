@@ -1,8 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion } from "framer-motion";
-import { Sparkles, ArrowRight, CheckCircle2, Mail, Phone, Calendar, Download, ShieldCheck, Factory, Building2, ShoppingBag } from "lucide-react";
+import { Sparkles, ArrowRight, CheckCircle2, Factory, Building2, ShoppingBag } from "lucide-react";
 
 export default function SlideTheAsk() {
     const [submitted, setSubmitted] = useState(false);
@@ -18,11 +17,11 @@ export default function SlideTheAsk() {
     return (
         <section
             id="the-ask"
-            className="min-h-screen relative flex flex-col justify-center py-24 px-6 md:px-12 lg:px-16 bg-[#FDFBF7] overflow-hidden"
+            className="min-h-screen relative flex flex-col justify-center pt-28 md:pt-32 pb-24 md:pb-28 px-4 sm:px-6 md:px-12 lg:px-16 bg-[#FDFBF7] overflow-hidden"
         >
-            <div className="max-w-[1360px] w-full mx-auto mb-10 flex items-center justify-between border-b border-black/10 pb-4">
-                <div className="flex items-center gap-3">
-                    <span className="font-heading font-black text-xs md:text-sm tracking-widest text-accent uppercase">
+            <div className="max-w-[1360px] w-full mx-auto mb-8 sm:mb-10 flex items-center justify-between border-b border-black/10 pb-3 sm:pb-4">
+                <div className="flex items-center gap-2.5">
+                    <span className="font-heading font-bold text-xs tracking-wider text-accent uppercase">
                         SLIDE 09 // THE ASK & PARTNERSHIP
                     </span>
                     <span className="w-1.5 h-1.5 rounded-full bg-accent" />
@@ -30,37 +29,37 @@ export default function SlideTheAsk() {
                         Seed Round Opportunity
                     </span>
                 </div>
-                <span className="text-[10px] font-heading font-bold uppercase tracking-[0.2em] bg-accent text-white px-3 py-1 rounded-full">
+                <span className="text-[10px] font-heading font-bold uppercase tracking-wider bg-accent text-white px-3 py-1 rounded-full">
                     Raising ₹60 Lakhs
                 </span>
             </div>
 
             <div className="max-w-[1360px] w-full mx-auto">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
                     {/* Left Column: The Vision & Investment Summary */}
                     <div className="lg:col-span-7">
-                        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent/15 border border-accent/25 text-xs font-heading font-bold uppercase tracking-wider text-accent mb-6">
+                        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent/15 border border-accent/25 text-xs font-heading font-bold uppercase tracking-wider text-accent mb-4">
                             <Sparkles className="w-3.5 h-3.5" />
                             <span>The Mission</span>
                         </div>
 
-                        <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-foreground mb-6">
+                        <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight text-foreground mb-4">
                             Partner With Us to Make Cold Brew a <br />
                             <span className="text-accent">Daily Default.</span>
                         </h2>
 
-                        <p className="font-sans text-lg text-foreground/80 leading-relaxed font-normal mb-8 max-w-2xl">
+                        <p className="font-sans text-base sm:text-lg text-foreground/80 leading-relaxed font-normal mb-6 max-w-2xl">
                             We are raising <strong className="text-foreground font-bold">₹60 Lakhs</strong> to establish micro-manufacturing infrastructure, validate Phase 1 corporate subscriptions in Udaipur, and scale into high-velocity quick-commerce distribution.
                         </p>
 
                         {/* 3 Milestone Unlocks */}
-                        <div className="space-y-4 mb-8">
-                            <div className="p-4 rounded-2xl bg-[#F6F2EC] border border-black/5 flex items-start gap-4">
-                                <div className="w-9 h-9 rounded-xl bg-black text-white flex items-center justify-center shrink-0 mt-0.5">
+                        <div className="space-y-3 mb-6">
+                            <div className="p-3.5 sm:p-4 rounded-2xl bg-[#F6F2EC] border border-black/5 flex items-start gap-3.5">
+                                <div className="w-8 h-8 rounded-xl bg-black text-white flex items-center justify-center shrink-0 mt-0.5">
                                     <Factory className="w-4 h-4" />
                                 </div>
                                 <div>
-                                    <h4 className="font-heading text-sm font-black uppercase text-foreground">
+                                    <h4 className="font-heading text-xs sm:text-sm font-bold uppercase text-foreground">
                                         Milestone 01: Commission Micro-Manufacturing
                                     </h4>
                                     <p className="text-xs text-foreground/70 mt-0.5 leading-relaxed">
@@ -69,12 +68,12 @@ export default function SlideTheAsk() {
                                 </div>
                             </div>
 
-                            <div className="p-4 rounded-2xl bg-[#F6F2EC] border border-black/5 flex items-start gap-4">
-                                <div className="w-9 h-9 rounded-xl bg-accent text-white flex items-center justify-center shrink-0 mt-0.5">
+                            <div className="p-3.5 sm:p-4 rounded-2xl bg-[#F6F2EC] border border-black/5 flex items-start gap-3.5">
+                                <div className="w-8 h-8 rounded-xl bg-accent text-white flex items-center justify-center shrink-0 mt-0.5">
                                     <Building2 className="w-4 h-4" />
                                 </div>
                                 <div>
-                                    <h4 className="font-heading text-sm font-black uppercase text-foreground">
+                                    <h4 className="font-heading text-xs sm:text-sm font-bold uppercase text-foreground">
                                         Milestone 02: Phase 1 Corporate Validation
                                     </h4>
                                     <p className="text-xs text-foreground/70 mt-0.5 leading-relaxed">
@@ -83,12 +82,12 @@ export default function SlideTheAsk() {
                                 </div>
                             </div>
 
-                            <div className="p-4 rounded-2xl bg-[#F6F2EC] border border-black/5 flex items-start gap-4">
-                                <div className="w-9 h-9 rounded-xl bg-accent-orange text-white flex items-center justify-center shrink-0 mt-0.5">
+                            <div className="p-3.5 sm:p-4 rounded-2xl bg-[#F6F2EC] border border-black/5 flex items-start gap-3.5">
+                                <div className="w-8 h-8 rounded-xl bg-accent-orange text-white flex items-center justify-center shrink-0 mt-0.5">
                                     <ShoppingBag className="w-4 h-4" />
                                 </div>
                                 <div>
-                                    <h4 className="font-heading text-sm font-black uppercase text-foreground">
+                                    <h4 className="font-heading text-xs sm:text-sm font-bold uppercase text-foreground">
                                         Milestone 03: Quick-Commerce Dark Store Listing
                                     </h4>
                                     <p className="text-xs text-foreground/70 mt-0.5 leading-relaxed">
@@ -101,26 +100,26 @@ export default function SlideTheAsk() {
 
                     {/* Right Column: Investor Connect & Data Room Card */}
                     <div className="lg:col-span-5">
-                        <div className="bg-[#1A1816] text-white rounded-3xl p-8 md:p-10 shadow-2xl relative overflow-hidden">
-                            <div className="absolute top-0 right-0 w-64 h-64 bg-accent/20 rounded-full blur-[80px] pointer-events-none" />
+                        <div className="bg-[#1A1816] text-white rounded-3xl p-6 sm:p-8 shadow-xl relative overflow-hidden">
+                            <div className="absolute top-0 right-0 w-56 h-56 bg-accent/20 rounded-full blur-[70px] pointer-events-none" />
 
                             <div className="relative z-10">
-                                <div className="flex items-center justify-between mb-6">
-                                    <span className="text-[10px] font-heading font-extrabold uppercase tracking-widest text-accent">
+                                <div className="flex items-center justify-between mb-4">
+                                    <span className="text-[10px] font-heading font-bold uppercase tracking-wider text-accent">
                                         Direct Founder Access
                                     </span>
-                                    <span className="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse" />
+                                    <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
                                 </div>
 
-                                <h3 className="font-heading text-2xl font-black uppercase text-white mb-2">
+                                <h3 className="font-heading text-xl sm:text-2xl font-bold uppercase text-white mb-1.5">
                                     Connect With Sumit Sharma
                                 </h3>
-                                <p className="text-xs text-white/70 leading-relaxed font-normal mb-8">
+                                <p className="text-xs text-white/70 leading-relaxed font-normal mb-6">
                                     Schedule a direct briefing, request the detailed financial model spreadsheet, or arrange sampling in Udaipur.
                                 </p>
 
                                 {!submitted ? (
-                                    <form onSubmit={handleSubmit} className="space-y-4 mb-6">
+                                    <form onSubmit={handleSubmit} className="space-y-3.5 mb-6">
                                         <div>
                                             <label className="text-[10px] font-heading uppercase tracking-wider text-white/60 block mb-1">
                                                 Investor Email Address
@@ -131,32 +130,32 @@ export default function SlideTheAsk() {
                                                 value={email}
                                                 onChange={(e) => setEmail(e.target.value)}
                                                 placeholder="investor@fund.com"
-                                                className="w-full bg-white/10 border border-white/20 rounded-2xl px-4 py-3 text-sm text-white placeholder-white/40 focus:outline-none focus:border-accent transition-colors"
+                                                className="w-full bg-white/10 border border-white/20 rounded-2xl px-4 py-2.5 text-sm text-white placeholder-white/40 focus:outline-none focus:border-accent transition-colors"
                                             />
                                         </div>
 
                                         <button
                                             type="submit"
-                                            className="w-full bg-accent text-white py-3.5 rounded-2xl font-heading font-bold text-xs uppercase tracking-wider hover:bg-accent/90 transition-all flex items-center justify-center gap-2 shadow-md"
+                                            className="w-full bg-accent text-white py-3 rounded-2xl font-heading font-bold text-xs uppercase tracking-wider hover:bg-accent/90 transition-all flex items-center justify-center gap-2 shadow-md"
                                         >
                                             <span>Request Data Room & Term Sheet</span>
                                             <ArrowRight className="w-4 h-4" />
                                         </button>
                                     </form>
                                 ) : (
-                                    <div className="p-6 rounded-2xl bg-white/10 border border-accent/40 mb-6 text-center">
-                                        <CheckCircle2 className="w-8 h-8 text-accent mx-auto mb-2" />
-                                        <h4 className="font-heading text-sm font-bold text-white uppercase">
+                                    <div className="p-5 rounded-2xl bg-white/10 border border-accent/40 mb-6 text-center">
+                                        <CheckCircle2 className="w-7 h-7 text-accent mx-auto mb-1.5" />
+                                        <h4 className="font-heading text-xs font-bold text-white uppercase">
                                             Request Recorded
                                         </h4>
-                                        <p className="text-xs text-white/70 mt-1">
-                                            The investor data room and financial model will be shared with <span className="text-accent">{email}</span>.
+                                        <p className="text-[11px] text-white/70 mt-1">
+                                            The investor data room will be shared with <span className="text-accent">{email}</span>.
                                         </p>
                                     </div>
                                 )}
 
                                 {/* Direct Contact Channels */}
-                                <div className="pt-6 border-t border-white/10 space-y-3 text-xs text-white/80">
+                                <div className="pt-4 border-t border-white/10 space-y-2 text-xs text-white/80">
                                     <div className="flex items-center justify-between">
                                         <span className="text-white/50">Founder:</span>
                                         <span className="font-semibold text-white">Sumit Sharma (F&B Founder)</span>

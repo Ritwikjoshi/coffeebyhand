@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Syne, Playfair_Display } from "next/font/google";
+import { Inter, Plus_Jakarta_Sans, Fraunces } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -7,14 +7,16 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const syne = Syne({
-  variable: "--font-syne",
+const plusJakarta = Plus_Jakarta_Sans({
+  variable: "--font-heading",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+const fraunces = Fraunces({
+  variable: "--font-serif",
   subsets: ["latin"],
+  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {
@@ -30,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${syne.variable} ${playfair.variable} antialiased`}
+        className={`${inter.variable} ${plusJakarta.variable} ${fraunces.variable} antialiased`}
       >
         {children}
       </body>
