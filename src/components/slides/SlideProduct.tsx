@@ -97,33 +97,29 @@ export default function SlideProduct() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, ease: "easeOut" }}
-                        className="lg:col-span-5 relative rounded-3xl overflow-hidden bg-gradient-to-b from-[#E8E1D7] to-[#D9D0C4] flex items-center justify-center p-6 sm:p-8 min-h-[340px] shadow-lg border border-black/10"
+                        className="lg:col-span-5 relative rounded-3xl overflow-hidden min-h-[420px] lg:min-h-[480px] shadow-lg border border-black/10"
                     >
-                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(178,130,90,0.22),transparent_65%)]" />
+                        {/* Full-bleed product image */}
+                        <Image
+                            src="/images/product-can.jpg"
+                            alt="Blob Coffee 250ml Premium Cold Brew Aluminum Can"
+                            fill
+                            className="object-cover object-center"
+                            priority
+                        />
+
+                        {/* Subtle gradient overlay at top and bottom for legibility */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20 z-10" />
 
                         {/* Floating badges */}
                         <div className="absolute top-4 left-4 z-20 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full border border-black/10 shadow-xs">
                             <span className="text-[10px] font-heading font-bold uppercase tracking-wider text-foreground">Single-Origin Arabica</span>
                         </div>
-                        <div className="absolute top-4 right-4 z-20 bg-black text-white px-3 py-1.5 rounded-full shadow-xs">
+                        <div className="absolute top-4 right-4 z-20 bg-black/80 backdrop-blur-sm text-white px-3 py-1.5 rounded-full shadow-xs">
                             <span className="text-[10px] font-heading font-bold uppercase tracking-wider">Nitrogen Flushed</span>
                         </div>
 
-                        <motion.div
-                            animate={{ y: [0, -10, 0] }}
-                            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                            className="relative w-[200px] sm:w-[240px] h-[300px] sm:h-[360px] z-10"
-                        >
-                            <Image
-                                src="/images/product-can.jpg"
-                                alt="Blob Coffee 250ml Premium Cold Brew Aluminum Can"
-                                fill
-                                className="object-contain drop-shadow-2xl"
-                                priority
-                            />
-                        </motion.div>
-
-                        {/* Bottom strip */}
+                        {/* Bottom spec strip */}
                         <div className="absolute bottom-4 left-4 right-4 z-20 bg-white/90 backdrop-blur-md rounded-2xl px-4 py-2.5 border border-black/10 shadow-xs flex items-center justify-between">
                             <span className="font-heading text-xs font-bold uppercase tracking-wider text-foreground">Blob Cold Brew</span>
                             <div className="flex items-center gap-2 text-[10px] text-foreground/60">

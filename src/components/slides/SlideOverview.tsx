@@ -147,39 +147,32 @@ export default function SlideOverview() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.7, ease: "easeOut" }}
-                        className="relative w-full max-w-[360px] aspect-[4/5] rounded-3xl bg-gradient-to-b from-[#EBE4DA] via-[#F2EDE4] to-[#DFD6C9] p-6 flex flex-col items-center justify-between shadow-xl border border-black/10 overflow-hidden"
+                        className="relative w-full max-w-[360px] aspect-[4/5] rounded-3xl overflow-hidden shadow-xl border border-black/10"
                     >
-                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(178,130,90,0.25),transparent_70%)]" />
+                        {/* Full-bleed can image */}
+                        <Image
+                            src="/images/product-can.jpg"
+                            alt="Blob Coffee 250ml Aluminum Can — Premium Cold Brew"
+                            fill
+                            className="object-cover object-center"
+                            priority
+                        />
+
+                        {/* Gradient overlay for badge/strip legibility */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20 z-10" />
 
                         {/* Top Badges */}
-                        <div className="relative z-10 w-full flex items-center justify-between text-[10px] font-heading font-bold uppercase tracking-wider">
+                        <div className="absolute top-4 left-4 right-4 z-20 flex items-center justify-between text-[10px] font-heading font-bold uppercase tracking-wider">
                             <span className="bg-white/90 backdrop-blur-md px-3 py-1 rounded-full border border-black/10 shadow-xs">
                                 Single-Origin
                             </span>
-                            <span className="bg-black text-white px-3 py-1 rounded-full shadow-xs">
+                            <span className="bg-black/80 backdrop-blur-sm text-white px-3 py-1 rounded-full shadow-xs">
                                 Concentrate
                             </span>
                         </div>
 
-                        {/* Centered Product Can Image */}
-                        <div className="relative w-full h-[60%] my-auto flex items-center justify-center">
-                            <motion.div
-                                animate={{ y: [0, -8, 0] }}
-                                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                                className="relative w-full h-full"
-                            >
-                                <Image
-                                    src="/images/product-can.jpg"
-                                    alt="Blob Coffee 250ml Aluminum Can — Premium Cold Brew"
-                                    fill
-                                    className="object-contain drop-shadow-2xl"
-                                    priority
-                                />
-                            </motion.div>
-                        </div>
-
                         {/* Product Spec Strip */}
-                        <div className="relative z-10 w-full bg-white/90 backdrop-blur-md rounded-2xl p-3.5 border border-black/10 shadow-xs">
+                        <div className="absolute bottom-4 left-4 right-4 z-20 bg-white/90 backdrop-blur-md rounded-2xl p-3.5 border border-black/10 shadow-xs">
                             <div className="flex items-center justify-between mb-1">
                                 <span className="font-heading text-xs font-bold uppercase tracking-wider">
                                     Blob Cold Brew Can
