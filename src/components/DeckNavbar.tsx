@@ -49,7 +49,12 @@ export default function DeckNavbar() {
         setMenuOpen(false);
         const element = document.getElementById(id);
         if (element) {
-            element.scrollIntoView({ behavior: "smooth" });
+            const navbarHeight = 80; // fixed navbar approx height in px
+            const elementTop = element.getBoundingClientRect().top + window.scrollY;
+            window.scrollTo({
+                top: elementTop - navbarHeight,
+                behavior: "smooth",
+            });
         }
     };
 
@@ -72,10 +77,7 @@ export default function DeckNavbar() {
             >
                 <div className="max-w-[1360px] mx-auto px-4 sm:px-6 md:px-8 flex items-center justify-between gap-4">
                     {/* Brand Logo & Deck Status */}
-                    <Link href="/" className="flex items-center gap-2.5 group shrink-0">
-                        <div className="w-8 h-8 rounded-lg bg-black flex items-center justify-center text-white font-heading font-extrabold text-xs tracking-tighter shadow-xs">
-                            BC
-                        </div>
+                    <Link href="/" className="flex items-center gap-2 group shrink-0">
                         <div className="flex flex-col leading-none">
                             <div className="flex items-center gap-2">
                                 <span className="font-heading text-base sm:text-lg font-bold tracking-tight text-foreground">

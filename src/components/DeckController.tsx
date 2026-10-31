@@ -64,7 +64,12 @@ export default function DeckController() {
         if (target) {
             const el = document.getElementById(target.id);
             if (el) {
-                el.scrollIntoView({ behavior: "smooth" });
+                const navbarHeight = 80;
+                const elementTop = el.getBoundingClientRect().top + window.scrollY;
+                window.scrollTo({
+                    top: elementTop - navbarHeight,
+                    behavior: "smooth",
+                });
                 setCurrentIndex(idx);
             }
         }
