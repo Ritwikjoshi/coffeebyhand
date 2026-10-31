@@ -147,32 +147,34 @@ export default function SlideOverview() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.7, ease: "easeOut" }}
-                        className="relative w-full max-w-[360px] aspect-[4/5] rounded-3xl overflow-hidden shadow-xl border border-black/10"
+                        className="w-full max-w-[360px] flex flex-col gap-3"
                     >
-                        {/* Full-bleed can image */}
-                        <Image
-                            src="/images/product-can.jpg"
-                            alt="Blob Coffee 250ml Aluminum Can — Premium Cold Brew"
-                            fill
-                            className="object-cover object-center"
-                            priority
-                        />
+                        {/* Image card */}
+                        <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden shadow-xl border border-black/10">
+                            <Image
+                                src="/images/product-can.jpg"
+                                alt="Blob Coffee 250ml Aluminum Can — Premium Cold Brew"
+                                fill
+                                className="object-cover object-center"
+                                priority
+                            />
 
-                        {/* Gradient overlay for badge/strip legibility */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20 z-10" />
+                            {/* Light gradient at top for badge legibility only */}
+                            <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-transparent z-10" />
 
-                        {/* Top Badges */}
-                        <div className="absolute top-4 left-4 right-4 z-20 flex items-center justify-between text-[10px] font-heading font-bold uppercase tracking-wider">
-                            <span className="bg-white/90 backdrop-blur-md px-3 py-1 rounded-full border border-black/10 shadow-xs">
-                                Single-Origin
-                            </span>
-                            <span className="bg-black/80 backdrop-blur-sm text-white px-3 py-1 rounded-full shadow-xs">
-                                Concentrate
-                            </span>
+                            {/* Top Badges */}
+                            <div className="absolute top-4 left-4 right-4 z-20 flex items-center justify-between text-[10px] font-heading font-bold uppercase tracking-wider">
+                                <span className="bg-white/90 backdrop-blur-md px-3 py-1 rounded-full border border-black/10 shadow-xs">
+                                    Single-Origin
+                                </span>
+                                <span className="bg-black/80 backdrop-blur-sm text-white px-3 py-1 rounded-full shadow-xs">
+                                    Concentrate
+                                </span>
+                            </div>
                         </div>
 
-                        {/* Product Spec Strip */}
-                        <div className="absolute bottom-4 left-4 right-4 z-20 bg-white/90 backdrop-blur-md rounded-2xl p-3.5 border border-black/10 shadow-xs">
+                        {/* Spec strip — directly below the image */}
+                        <div className="bg-white rounded-2xl p-3.5 border border-black/10 shadow-xs">
                             <div className="flex items-center justify-between mb-1">
                                 <span className="font-heading text-xs font-bold uppercase tracking-wider">
                                     Blob Cold Brew Can

@@ -89,39 +89,41 @@ export default function SlideProduct() {
                 </div>
 
                 {/* Two-column: Product Can + Spec Cards */}
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-10 sm:mb-12 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-10 sm:mb-12 items-start">
 
-                    {/* Left: Real Product Can */}
+                    {/* Left: Real Product Can + label below */}
                     <motion.div
                         initial={{ opacity: 0, scale: 0.93 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, ease: "easeOut" }}
-                        className="lg:col-span-5 relative rounded-3xl overflow-hidden min-h-[420px] lg:min-h-[480px] shadow-lg border border-black/10"
+                        className="lg:col-span-5 flex flex-col gap-3"
                     >
-                        {/* Full-bleed product image */}
-                        <Image
-                            src="/images/product-can.jpg"
-                            alt="Blob Coffee 250ml Premium Cold Brew Aluminum Can"
-                            fill
-                            className="object-cover object-center"
-                            priority
-                        />
+                        {/* Image card */}
+                        <div className="relative rounded-3xl overflow-hidden min-h-[420px] lg:min-h-[480px] shadow-lg border border-black/10">
+                            <Image
+                                src="/images/product-can.jpg"
+                                alt="Blob Coffee 250ml Premium Cold Brew Aluminum Can"
+                                fill
+                                className="object-cover object-center"
+                                priority
+                            />
 
-                        {/* Subtle gradient overlay at top and bottom for legibility */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20 z-10" />
+                            {/* Light gradient only at top for badge legibility */}
+                            <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-transparent z-10" />
 
-                        {/* Floating badges */}
-                        <div className="absolute top-4 left-4 z-20 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full border border-black/10 shadow-xs">
-                            <span className="text-[10px] font-heading font-bold uppercase tracking-wider text-foreground">Single-Origin Arabica</span>
+                            {/* Floating badges */}
+                            <div className="absolute top-4 left-4 z-20 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full border border-black/10 shadow-xs">
+                                <span className="text-[10px] font-heading font-bold uppercase tracking-wider text-foreground">Single-Origin Arabica</span>
+                            </div>
+                            <div className="absolute top-4 right-4 z-20 bg-black/80 backdrop-blur-sm text-white px-3 py-1.5 rounded-full shadow-xs">
+                                <span className="text-[10px] font-heading font-bold uppercase tracking-wider">Nitrogen Flushed</span>
+                            </div>
                         </div>
-                        <div className="absolute top-4 right-4 z-20 bg-black/80 backdrop-blur-sm text-white px-3 py-1.5 rounded-full shadow-xs">
-                            <span className="text-[10px] font-heading font-bold uppercase tracking-wider">Nitrogen Flushed</span>
-                        </div>
 
-                        {/* Bottom spec strip */}
-                        <div className="absolute bottom-4 left-4 right-4 z-20 bg-white/90 backdrop-blur-md rounded-2xl px-4 py-2.5 border border-black/10 shadow-xs flex items-center justify-between">
-                            <span className="font-heading text-xs font-bold uppercase tracking-wider text-foreground">Blob Cold Brew</span>
+                        {/* Spec strip — below the image */}
+                        <div className="bg-white rounded-2xl px-4 py-3 border border-black/10 shadow-xs flex items-center justify-between">
+                            <span className="font-heading text-xs font-bold uppercase tracking-wider text-foreground">Blob Cold Brew Can</span>
                             <div className="flex items-center gap-2 text-[10px] text-foreground/60">
                                 <span className="text-accent font-semibold">250ml</span>
                                 <span>·</span>
