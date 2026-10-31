@@ -107,7 +107,7 @@ export default function SlideOverview() {
                                 Shelf Life
                             </span>
                             <span className="font-heading text-base sm:text-lg font-bold text-foreground block mt-0.5">
-                                6 Months
+                                9 Months
                             </span>
                             <span className="text-[10px] text-accent block font-medium">
                                 Ambient Stable
@@ -131,7 +131,7 @@ export default function SlideOverview() {
                                 Capital Ask
                             </span>
                             <span className="font-heading text-base sm:text-lg font-bold text-foreground block mt-0.5">
-                                ₹60 Lakhs
+                                ₹30 Lakhs
                             </span>
                             <span className="text-[10px] text-accent block font-medium">
                                 Micro-Mfg Setup

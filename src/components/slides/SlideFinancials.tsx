@@ -8,7 +8,7 @@ const capitalItems = [
         name: "Can + Print (Working Capital)",
         unitCost: "₹35 / unit (50k units)",
         totalCost: "₹17,50,000",
-        percentage: "29.2%",
+        percentage: "58.3%",
         category: "Inventory & Working Capital",
         icon: Package
     },
@@ -16,7 +16,7 @@ const capitalItems = [
         name: "Packaging (Boxes, Shippers, Sleeves)",
         unitCost: "₹15 / unit (50k units)",
         totalCost: "₹7,50,000",
-        percentage: "12.5%",
+        percentage: "25.0%",
         category: "Packaging Materials",
         icon: Package
     },
@@ -24,7 +24,7 @@ const capitalItems = [
         name: "Industrial Precision Grinder",
         unitCost: "₹3,00,000 / unit",
         totalCost: "₹3,00,000",
-        percentage: "5.0%",
+        percentage: "10.0%",
         category: "Micro-Mfg Machinery",
         icon: Factory
     },
@@ -32,7 +32,7 @@ const capitalItems = [
         name: "2x Can Sealing Machines",
         unitCost: "₹50,000 / machine",
         totalCost: "₹1,00,000",
-        percentage: "1.7%",
+        percentage: "3.3%",
         category: "Micro-Mfg Machinery",
         icon: Wrench
     },
@@ -40,7 +40,7 @@ const capitalItems = [
         name: "Deep Fridge Storage",
         unitCost: "₹50,000 / unit",
         totalCost: "₹50,000",
-        percentage: "0.8%",
+        percentage: "1.7%",
         category: "Micro-Mfg Machinery",
         icon: Factory
     },
@@ -48,7 +48,7 @@ const capitalItems = [
         name: "Brewing Tools & Fittings",
         unitCost: "₹50,000 setup",
         totalCost: "₹50,000",
-        percentage: "0.8%",
+        percentage: "1.7%",
         category: "Micro-Mfg Machinery",
         icon: Wrench
     }
@@ -92,7 +92,7 @@ export default function SlideFinancials() {
                     </span>
                 </div>
                 <span className="text-[10px] font-heading font-bold uppercase tracking-wider bg-black text-white px-3 py-1 rounded-full">
-                    Total Ask: ₹60 Lakhs
+                    Total Ask: ₹30 Lakhs
                 </span>
             </div>
 
@@ -104,7 +104,7 @@ export default function SlideFinancials() {
                             <span className="text-accent">Capital Efficiency.</span>
                         </h2>
                         <p className="font-sans text-base sm:text-lg text-foreground/70 max-w-2xl font-normal leading-relaxed">
-                            A pragmatic capital allocation model designed to stand up an independent micro-canning unit, fund 50,000 cans of working capital, and provide comfortable operational runway.
+                            A pragmatic capital allocation model designed to stand up an independent micro-canning unit in Udaipur, fund 50,000 cans of working capital, and launch with maximum capital efficiency.
                         </p>
                     </div>
 
@@ -112,13 +112,13 @@ export default function SlideFinancials() {
                     <div className="flex items-center gap-3 sm:gap-4 shrink-0">
                         <div className="p-4 sm:p-5 rounded-3xl bg-white border border-black/10 shadow-xs">
                             <span className="text-[10px] font-heading uppercase tracking-wider text-foreground/50 block font-bold mb-0.5">
-                                Upfront Capital Setup
+                                Capital Ask (100% Setup)
                             </span>
                             <div className="font-heading text-2xl sm:text-3xl font-extrabold text-foreground">
                                 ₹30 Lakhs
                             </div>
                             <span className="text-[10px] sm:text-xs text-accent font-semibold block mt-0.5">
-                                Capex & Inventory Launch
+                                Capex & 50k Can Inventory
                             </span>
                         </div>
 
@@ -146,7 +146,7 @@ export default function SlideFinancials() {
                                     Capital Setup & Inventory Breakdown
                                 </h3>
                                 <p className="text-xs text-foreground/60 font-medium mt-0.5">
-                                    Total Upfront Capital Budget: ₹30,00,000
+                                    Total Upfront Capital Budget: ₹30,00,000 (100% of Seed Round)
                                 </p>
                             </div>
                             <span className="text-xs font-heading font-bold uppercase px-3 py-1 rounded-full bg-accent/15 text-accent">
@@ -239,38 +239,38 @@ export default function SlideFinancials() {
                 {/* Fund Utilization Bar Visual */}
                 <div className="p-5 sm:p-6 rounded-3xl bg-white border border-black/10 shadow-xs">
                     <div className="flex items-center justify-between mb-3 text-xs font-heading font-bold uppercase tracking-wider">
-                        <span className="text-foreground/70">Seed Fund Allocation Map (₹60 Lakhs)</span>
-                        <span className="text-accent">100% Accounted</span>
+                        <span className="text-foreground/70">Seed Fund Allocation Map (₹30 Lakhs)</span>
+                        <span className="text-accent">100% Allocated</span>
                     </div>
 
                     <div className="w-full h-3.5 bg-black/5 rounded-full overflow-hidden flex gap-1 p-0.5">
-                        <div className="bg-[#B2825A] h-full rounded-full" style={{ width: "29.2%" }} title="Can + Print" />
-                        <div className="bg-[#D4A373] h-full rounded-full" style={{ width: "12.5%" }} title="Packaging" />
-                        <div className="bg-[#1A1816] h-full rounded-full" style={{ width: "8.3%" }} title="Machinery" />
-                        <div className="bg-[#E66B32] h-full rounded-full" style={{ width: "11.0%" }} title="OPEX Runway" />
-                        <div className="bg-[#8C7862] h-full rounded-full" style={{ width: "39.0%" }} title="GTM Buffer & Growth" />
+                        <div className="bg-[#B2825A] h-full rounded-full" style={{ width: "58.3%" }} title="Can + Print (58.3%)" />
+                        <div className="bg-[#D4A373] h-full rounded-full" style={{ width: "25.0%" }} title="Packaging (25.0%)" />
+                        <div className="bg-[#1A1816] h-full rounded-full" style={{ width: "10.0%" }} title="Industrial Grinder (10.0%)" />
+                        <div className="bg-[#E66B32] h-full rounded-full" style={{ width: "3.3%" }} title="Can Sealing (3.3%)" />
+                        <div className="bg-[#8C7862] h-full rounded-full" style={{ width: "3.4%" }} title="Fridge & Brewing Gear (3.4%)" />
                     </div>
 
                     <div className="flex flex-wrap gap-x-4 gap-y-2 mt-3.5 text-[10px] font-heading font-medium text-foreground/70">
                         <div className="flex items-center gap-1.5">
                             <span className="w-2.5 h-2.5 rounded-full bg-[#B2825A]" />
-                            <span>Can + Print (29.2%)</span>
+                            <span>Can + Print (58.3% · ₹17.5L)</span>
                         </div>
                         <div className="flex items-center gap-1.5">
                             <span className="w-2.5 h-2.5 rounded-full bg-[#D4A373]" />
-                            <span>Packaging (12.5%)</span>
+                            <span>Packaging (25.0% · ₹7.5L)</span>
                         </div>
                         <div className="flex items-center gap-1.5">
                             <span className="w-2.5 h-2.5 rounded-full bg-[#1A1816]" />
-                            <span>Machinery (8.3%)</span>
+                            <span>Industrial Grinder (10.0% · ₹3.0L)</span>
                         </div>
                         <div className="flex items-center gap-1.5">
                             <span className="w-2.5 h-2.5 rounded-full bg-[#E66B32]" />
-                            <span>OPEX Runway (11.0%)</span>
+                            <span>2x Can Sealers (3.3% · ₹1.0L)</span>
                         </div>
                         <div className="flex items-center gap-1.5">
                             <span className="w-2.5 h-2.5 rounded-full bg-[#8C7862]" />
-                            <span>GTM Scale Reserve (39.0%)</span>
+                            <span>Fridge & Tools (3.4% · ₹1.0L)</span>
                         </div>
                     </div>
                 </div>

@@ -20,7 +20,7 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
-  title: "Blob Coffee — Investor Pitch Deck | Seed Round ₹60 Lakhs",
+  title: "Blob Coffee — Investor Pitch Deck | Seed Round ₹30 Lakhs",
   description: "Blob Coffee is a premium single-origin concentrated cold brew designed for cafe-grade taste at home or on the go. Seed Round Pitch Deck.",
 };
 

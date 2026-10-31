@@ -19,7 +19,7 @@ const specs = [
     },
     {
         label: "Ambient Shelf Life",
-        value: "6 Months Stable",
+        value: "9 Months Stable",
         sub: "Zero cold-chain dependency for transport, storage, or retail dark stores.",
         icon: Clock
     },

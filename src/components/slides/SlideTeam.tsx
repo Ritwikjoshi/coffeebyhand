@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Award, Briefcase, Coffee, CheckCircle, ShieldCheck, UserCheck } from "lucide-react";
+import { Award, Briefcase, Coffee, CheckCircle, ShieldCheck, UserCheck, MapPin } from "lucide-react";
 
 export default function SlideTeam() {
     return (
@@ -38,51 +38,62 @@ export default function SlideTeam() {
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
-                    {/* Founder Spotlight Card */}
+                    {/* Founder Spotlight Card with Real Portrait */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5 }}
-                        className="lg:col-span-5 bg-white rounded-3xl p-6 sm:p-8 border border-black/10 shadow-xs flex flex-col justify-between"
+                        className="lg:col-span-5 bg-white rounded-3xl p-6 sm:p-7 border border-black/10 shadow-xs flex flex-col justify-between"
                     >
                         <div>
-                            <div className="flex items-center gap-4 mb-6">
-                                <div className="relative w-16 h-16 rounded-2xl overflow-hidden border border-black/10 shadow-md shrink-0">
+                            {/* Portrait Photo & Bio Header */}
+                            <div className="flex items-start gap-4 mb-6">
+                                <div className="relative w-24 h-28 sm:w-28 sm:h-32 rounded-2xl overflow-hidden border border-black/10 shadow-sm shrink-0 bg-[#E8E2D8]">
                                     <Image
                                         src="/images/sumit-sharma.jpg"
                                         alt="Sumit Sharma - Founder of Blob Coffee"
                                         fill
-                                        className="object-cover"
+                                        className="object-cover object-top"
+                                        priority
                                     />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+                                    <span className="absolute bottom-1.5 left-1.5 text-[8px] font-heading font-bold uppercase px-1.5 py-0.5 rounded bg-black/70 text-white tracking-wider">
+                                        Founder
+                                    </span>
                                 </div>
-                                <div>
-                                    <h3 className="font-heading text-xl sm:text-2xl font-bold text-foreground uppercase tracking-tight">
+
+                                <div className="flex-1 min-w-0 pt-1">
+                                    <div className="inline-flex items-center gap-1 text-[10px] text-accent font-semibold uppercase tracking-wider mb-1">
+                                        <MapPin className="w-3 h-3" /> Udaipur, Rajasthan
+                                    </div>
+                                    <h3 className="font-heading text-xl sm:text-2xl font-bold text-foreground uppercase tracking-tight truncate">
                                         Sumit Sharma
                                     </h3>
-                                    <p className="text-xs sm:text-sm font-heading font-bold text-accent uppercase tracking-wider">
+                                    <p className="text-xs sm:text-sm font-heading font-bold text-accent uppercase tracking-wider mt-0.5">
                                         Founder & Beverage Architect
                                     </p>
-                                    <span className="text-xs text-foreground/50 font-medium">
-                                        Udaipur, Rajasthan
-                                    </span>
+                                    <p className="text-[11px] text-foreground/60 font-medium mt-1.5 leading-relaxed">
+                                        8+ years operating a profitable F&B venture with deep technical expertise in brewing dynamics and coffee tasting.
+                                    </p>
                                 </div>
                             </div>
 
-                            <div className="space-y-3 mb-6">
-                                <div className="p-3.5 rounded-2xl bg-[#FAF7F2] border border-black/5 flex items-start gap-3">
+                            {/* Credentials List */}
+                            <div className="space-y-2.5 mb-6">
+                                <div className="p-3 rounded-2xl bg-[#FAF7F2] border border-black/5 flex items-start gap-3">
                                     <Briefcase className="w-4 h-4 text-accent shrink-0 mt-0.5" />
                                     <div>
                                         <p className="font-heading text-xs font-bold text-foreground">
                                             8+ Years F&B Venture Founder
                                         </p>
                                         <p className="text-xs text-foreground/70 mt-0.5 leading-relaxed">
-                                            Successfully operating a profitable food venture for over 8 years, mastering unit economics, food safety compliance, and team operations.
+                                            Running a successful food venture for 8+ years, mastering unit economics, food safety compliance, and team operations.
                                         </p>
                                     </div>
                                 </div>
 
-                                <div className="p-3.5 rounded-2xl bg-[#FAF7F2] border border-black/5 flex items-start gap-3">
+                                <div className="p-3 rounded-2xl bg-[#FAF7F2] border border-black/5 flex items-start gap-3">
                                     <Coffee className="w-4 h-4 text-accent shrink-0 mt-0.5" />
                                     <div>
                                         <p className="font-heading text-xs font-bold text-foreground">
@@ -94,21 +105,21 @@ export default function SlideTeam() {
                                     </div>
                                 </div>
 
-                                <div className="p-3.5 rounded-2xl bg-[#FAF7F2] border border-black/5 flex items-start gap-3">
+                                <div className="p-3 rounded-2xl bg-[#FAF7F2] border border-black/5 flex items-start gap-3">
                                     <Award className="w-4 h-4 text-accent shrink-0 mt-0.5" />
                                     <div>
                                         <p className="font-heading text-xs font-bold text-foreground">
                                             Beverage Consultant
                                         </p>
                                         <p className="text-xs text-foreground/70 mt-0.5 leading-relaxed">
-                                            Core consulting specialty in Brewing Methodologies, beverage stabilization, and Sensory Coffee Tasting panels.
+                                            Specializing in Brewing Methodologies, beverage stabilization, and Sensory Coffee Tasting calibration.
                                         </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="pt-4 border-t border-black/10 flex items-center justify-between text-xs text-foreground/60 font-medium">
+                        <div className="pt-3.5 border-t border-black/10 flex items-center justify-between text-xs text-foreground/60 font-medium">
                             <span>Specialty: Cold Percolations</span>
                             <span className="flex items-center gap-1 text-accent font-semibold">
                                 <CheckCircle className="w-3.5 h-3.5" /> Bootstrapped Discipline
@@ -156,7 +167,7 @@ export default function SlideTeam() {
                                     Chemical-Free Preservation
                                 </h4>
                                 <p className="text-xs text-foreground/70 leading-relaxed font-normal">
-                                    Formulated with zero synthetic preservatives. Nitrogen flushing naturalization allows 6-month shelf life without refrigerated cold-chain costs.
+                                    Formulated with zero synthetic preservatives. Nitrogen flushing naturalization allows 9-month shelf life without refrigerated cold-chain costs.
                                 </p>
                             </div>
                             <div className="mt-4 pt-3 border-t border-black/5 text-[10px] font-heading font-semibold text-accent uppercase">

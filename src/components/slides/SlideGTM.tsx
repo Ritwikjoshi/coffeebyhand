@@ -161,7 +161,7 @@ export default function SlideGTM() {
                         </div>
 
                         <div className="p-3.5 rounded-2xl bg-[#FAF7F2] border border-black/5 text-xs text-foreground/70 leading-relaxed">
-                            <strong className="text-foreground font-semibold">The Ambient Advantage:</strong> Because Blob Coffee holds a 6-month shelf life without refrigeration, dark stores do not incur refrigerated slot surcharges, making distribution significantly cheaper than competitors.
+                            <strong className="text-foreground font-semibold">The Ambient Advantage:</strong> Because Blob Coffee holds a 9-month shelf life without refrigeration, dark stores do not incur refrigerated slot surcharges, making distribution significantly cheaper than competitors.
                         </div>
                     </motion.div>
                 </div>

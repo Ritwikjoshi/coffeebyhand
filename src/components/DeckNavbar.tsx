@@ -14,7 +14,7 @@ const slidesList = [
     { id: "traction", num: "06", title: "Traction", short: "Traction" },
     { id: "gtm", num: "07", title: "GTM Strategy", short: "GTM" },
     { id: "financials", num: "08", title: "Use of Funds", short: "Funds" },
-    { id: "the-ask", num: "09", title: "The Ask (₹60L)", short: "The Ask" },
+    { id: "the-ask", num: "09", title: "The Ask (₹30L)", short: "The Ask" },
 ];
 
 export default function DeckNavbar() {
@@ -132,7 +132,7 @@ export default function DeckNavbar() {
                             onClick={() => scrollTo("the-ask")}
                             className="inline-flex items-center gap-1.5 bg-black text-white px-3.5 sm:px-4 py-2 rounded-full text-xs font-heading font-bold uppercase tracking-wider hover:bg-black/85 transition-all shadow-xs"
                         >
-                            <span>Seed Ask: ₹60L</span>
+                            <span>Seed Ask: ₹30L</span>
                             <ArrowUpRight className="w-3.5 h-3.5 text-accent" />
                         </button>
 
@@ -190,7 +190,7 @@ export default function DeckNavbar() {
                             onClick={() => scrollTo("the-ask")}
                             className="w-full bg-accent text-white py-3 rounded-full text-center text-xs font-heading font-bold uppercase tracking-widest shadow-md"
                         >
-                            Review Investment Opportunity (₹60 Lakhs)
+                            Review Investment Opportunity (₹30 Lakhs)
                         </button>
                     </motion.div>
                 )}

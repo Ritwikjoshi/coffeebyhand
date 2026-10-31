@@ -12,7 +12,7 @@ const matrix = [
     },
     {
         feature: "Shelf Life Stability",
-        blob: "6 Months Ambient (Zero Cold Chain)",
+        blob: "9 Months Ambient (Zero Cold Chain)",
         blueTokai: "Short Cold-Chain Dependent",
         sleepyOwl: "Ambient but requires manual water steep"
     },

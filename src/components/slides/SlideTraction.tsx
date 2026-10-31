@@ -114,7 +114,7 @@ export default function SlideTraction() {
                             </p>
                         </div>
                         <div className="mt-5 pt-3.5 border-t border-black/5 flex items-center gap-1.5 text-xs font-heading font-semibold text-accent-orange">
-                            <CheckCircle2 className="w-4 h-4" /> 6-Month Shelf Validation
+                            <CheckCircle2 className="w-4 h-4" /> 9-Month Shelf Validation
                         </div>
                     </motion.div>
                 </div>

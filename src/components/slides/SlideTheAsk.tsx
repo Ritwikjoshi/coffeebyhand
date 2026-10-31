@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { Sparkles, ArrowRight, CheckCircle2, Factory, Building2, ShoppingBag } from "lucide-react";
 
 export default function SlideTheAsk() {
@@ -30,7 +31,7 @@ export default function SlideTheAsk() {
                     </span>
                 </div>
                 <span className="text-[10px] font-heading font-bold uppercase tracking-wider bg-accent text-white px-3 py-1 rounded-full">
-                    Raising ₹60 Lakhs
+                    Raising ₹30 Lakhs
                 </span>
             </div>
 
@@ -49,7 +50,7 @@ export default function SlideTheAsk() {
                         </h2>
 
                         <p className="font-sans text-base sm:text-lg text-foreground/80 leading-relaxed font-normal mb-6 max-w-2xl">
-                            We are raising <strong className="text-foreground font-bold">₹60 Lakhs</strong> to establish micro-manufacturing infrastructure, validate Phase 1 corporate subscriptions in Udaipur, and scale into high-velocity quick-commerce distribution.
+                            We are raising <strong className="text-foreground font-bold">₹30 Lakhs</strong> to establish micro-manufacturing infrastructure, validate Phase 1 corporate subscriptions in Udaipur, and scale into high-velocity quick-commerce distribution.
                         </p>
 
                         {/* 3 Milestone Unlocks */}
@@ -91,7 +92,7 @@ export default function SlideTheAsk() {
                                         Milestone 03: Quick-Commerce Dark Store Listing
                                     </h4>
                                     <p className="text-xs text-foreground/70 mt-0.5 leading-relaxed">
-                                        Leverage 6-month ambient shelf life to onboard Blinkit, Zepto, and Instamart dark stores without cold-chain inventory surcharges.
+                                        Leverage 9-month ambient shelf life to onboard Blinkit, Zepto, and Instamart dark stores without cold-chain inventory surcharges.
                                     </p>
                                 </div>
                             </div>
@@ -111,9 +112,25 @@ export default function SlideTheAsk() {
                                     <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
                                 </div>
 
-                                <h3 className="font-heading text-xl sm:text-2xl font-bold uppercase text-white mb-1.5">
-                                    Connect With Sumit Sharma
-                                </h3>
+                                <div className="flex items-center gap-3.5 mb-4">
+                                    <div className="relative w-12 h-12 rounded-xl overflow-hidden border border-white/20 shadow-xs shrink-0">
+                                        <Image
+                                            src="/images/sumit-sharma.jpg"
+                                            alt="Sumit Sharma"
+                                            fill
+                                            className="object-cover object-top"
+                                        />
+                                    </div>
+                                    <div>
+                                        <h3 className="font-heading text-lg sm:text-xl font-bold uppercase text-white leading-tight">
+                                            Sumit Sharma
+                                        </h3>
+                                        <span className="text-xs text-accent font-semibold">
+                                            Founder & Beverage Architect
+                                        </span>
+                                    </div>
+                                </div>
+
                                 <p className="text-xs text-white/70 leading-relaxed font-normal mb-6">
                                     Schedule a direct briefing, request the detailed financial model spreadsheet, or arrange sampling in Udaipur.
                                 </p>
@@ -158,15 +175,15 @@ export default function SlideTheAsk() {
                                 <div className="pt-4 border-t border-white/10 space-y-2 text-xs text-white/80">
                                     <div className="flex items-center justify-between">
                                         <span className="text-white/50">Founder:</span>
-                                        <span className="font-semibold text-white">Sumit Sharma (F&B Founder)</span>
+                                        <span className="font-semibold text-white">Sumit Sharma (8+ Yrs F&B)</span>
                                     </div>
                                     <div className="flex items-center justify-between">
                                         <span className="text-white/50">Location:</span>
                                         <span className="font-semibold text-white">Udaipur, Rajasthan, India</span>
                                     </div>
                                     <div className="flex items-center justify-between">
-                                        <span className="text-white/50">Format:</span>
-                                        <span className="font-semibold text-accent">Seed Round Equity · ₹60 Lakhs</span>
+                                        <span className="text-white/50">Round Format:</span>
+                                        <span className="font-semibold text-accent">Seed Round Equity · ₹30 Lakhs</span>
                                     </div>
                                 </div>
                             </div>

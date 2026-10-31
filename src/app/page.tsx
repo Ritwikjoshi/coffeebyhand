@@ -42,7 +42,7 @@ export default function Home() {
       {/* Slide 08: Use of Funds & Financial Breakdown */}
       <SlideFinancials />
 
-      {/* Slide 09: The Ask (₹60 Lakhs) */}
+      {/* Slide 09: The Ask (₹30 Lakhs) */}
       <SlideTheAsk />
 
       {/* Deck Footer */}
