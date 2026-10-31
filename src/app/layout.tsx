@@ -18,7 +18,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Cofee by H.A.N.D. | Modern Coffee Rituals",
+  title: "Blob Coffee | Modern Coffee Rituals",
   description: "The best part of your day shouldn't be a luxury—it should be a ritual held in the palm of your hand.",
 };
 

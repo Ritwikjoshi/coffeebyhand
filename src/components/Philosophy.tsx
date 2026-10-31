@@ -34,7 +34,7 @@ const Philosophy = () => {
                             We didn’t reinvent coffee; we just liberated it from the kitchen counter.
                         </p>
                         <p className="text-lg leading-relaxed opacity-60 mb-12">
-                            Whether you’re at 30,000 feet or your office desk, H.A.N.D. ensures the quality of a boutique cafe follows you everywhere. Precision packaging meets premium beans, designed to fit into the palm of your hand and the pace of your day.
+                            Whether you’re at 30,000 feet or your office desk, Blob Coffee ensures the quality of a boutique cafe follows you everywhere. Precision packaging meets premium beans, designed to fit into the palm of your hand and the pace of your day.
                         </p>
 
                         <motion.div

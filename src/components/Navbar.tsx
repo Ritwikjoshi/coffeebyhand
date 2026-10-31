@@ -29,8 +29,8 @@ const Logo = () => (
             />
         </div>
         <div className="flex flex-col leading-none">
-            <span className="font-heading text-xl tracking-tight font-extrabold uppercase">H.A.N.D.</span>
-            <span className="text-[7px] tracking-[0.3em] font-light opacity-60 ml-[1px]">C O F E E</span>
+            <span className="font-heading text-xl tracking-tight font-extrabold uppercase">BLOB</span>
+            <span className="text-[7px] tracking-[0.3em] font-light opacity-60 ml-[1px]">C O F F E E</span>
         </div>
     </div>
 );

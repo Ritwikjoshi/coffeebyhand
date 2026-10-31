@@ -127,7 +127,7 @@ const Hero = () => {
                     >
                         <Image
                             src="/images/hero-vibe.png"
-                            alt="H.A.N.D. Coffee Vibe"
+                            alt="Blob Coffee Vibe"
                             fill
                             className="object-contain drop-shadow-2xl z-20"
                             priority

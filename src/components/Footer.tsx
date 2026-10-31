@@ -47,8 +47,8 @@ const Footer = () => {
 
                 <div className="pt-12 border-t border-black/5 flex flex-col md:flex-row justify-between items-center gap-8">
                     <div className="flex items-center gap-4">
-                        <span className="font-heading text-lg font-black uppercase tracking-tighter">H.A.N.D.</span>
-                        <span className="text-[10px] opacity-40 uppercase tracking-[0.2em]">© 2026 Cofee by H.A.N.D.</span>
+                        <span className="font-heading text-lg font-black uppercase tracking-tighter">BLOB</span>
+                        <span className="text-[10px] opacity-40 uppercase tracking-[0.2em]">© 2026 Blob Coffee</span>
                     </div>
                     <div className="flex items-center gap-8 text-[10px] uppercase tracking-widest font-bold opacity-40">
                         <a href="#" className="hover:opacity-100 transition-opacity">Privacy Policy</a>
