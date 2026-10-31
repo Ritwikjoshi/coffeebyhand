@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Shield, Clock, Layers, Flame } from "lucide-react";
 
@@ -68,7 +69,7 @@ export default function SlideProduct() {
                     </span>
                     <span className="w-1.5 h-1.5 rounded-full bg-accent" />
                     <span className="text-xs uppercase tracking-wider text-foreground/50 font-medium">
-                        Engineering & The Ritual
+                        Engineering &amp; The Ritual
                     </span>
                 </div>
                 <span className="text-[10px] font-heading font-bold uppercase tracking-wider bg-accent/20 text-accent px-3 py-1 rounded-full">
@@ -87,36 +88,83 @@ export default function SlideProduct() {
                     </p>
                 </div>
 
-                {/* Specs Cards Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10 sm:mb-12">
-                    {specs.map((item, i) => {
-                        const Icon = item.icon;
-                        return (
-                            <motion.div
-                                key={item.label}
-                                initial={{ opacity: 0, y: 15 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.4, delay: i * 0.08 }}
-                                className="bg-white rounded-2xl p-5 sm:p-6 border border-black/10 shadow-xs flex flex-col justify-between"
-                            >
-                                <div className="w-9 h-9 rounded-xl bg-[#F6F2EC] flex items-center justify-center text-foreground mb-4">
-                                    <Icon className="w-4 h-4 text-accent" />
-                                </div>
-                                <div>
-                                    <span className="text-[10px] font-heading font-bold uppercase tracking-wider text-foreground/50 block mb-1">
-                                        {item.label}
-                                    </span>
-                                    <h3 className="font-heading text-lg font-bold text-foreground mb-1.5">
-                                        {item.value}
-                                    </h3>
-                                    <p className="text-xs text-foreground/70 leading-relaxed font-normal">
-                                        {item.sub}
-                                    </p>
-                                </div>
-                            </motion.div>
-                        );
-                    })}
+                {/* Two-column: Product Can + Spec Cards */}
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-10 sm:mb-12 items-center">
+
+                    {/* Left: Real Product Can */}
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.93 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, ease: "easeOut" }}
+                        className="lg:col-span-5 relative rounded-3xl overflow-hidden bg-gradient-to-b from-[#E8E1D7] to-[#D9D0C4] flex items-center justify-center p-6 sm:p-8 min-h-[340px] shadow-lg border border-black/10"
+                    >
+                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(178,130,90,0.22),transparent_65%)]" />
+
+                        {/* Floating badges */}
+                        <div className="absolute top-4 left-4 z-20 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full border border-black/10 shadow-xs">
+                            <span className="text-[10px] font-heading font-bold uppercase tracking-wider text-foreground">Single-Origin Arabica</span>
+                        </div>
+                        <div className="absolute top-4 right-4 z-20 bg-black text-white px-3 py-1.5 rounded-full shadow-xs">
+                            <span className="text-[10px] font-heading font-bold uppercase tracking-wider">Nitrogen Flushed</span>
+                        </div>
+
+                        <motion.div
+                            animate={{ y: [0, -10, 0] }}
+                            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                            className="relative w-[200px] sm:w-[240px] h-[300px] sm:h-[360px] z-10"
+                        >
+                            <Image
+                                src="/images/product-can.jpg"
+                                alt="Blob Coffee 250ml Premium Cold Brew Aluminum Can"
+                                fill
+                                className="object-contain drop-shadow-2xl"
+                                priority
+                            />
+                        </motion.div>
+
+                        {/* Bottom strip */}
+                        <div className="absolute bottom-4 left-4 right-4 z-20 bg-white/90 backdrop-blur-md rounded-2xl px-4 py-2.5 border border-black/10 shadow-xs flex items-center justify-between">
+                            <span className="font-heading text-xs font-bold uppercase tracking-wider text-foreground">Blob Cold Brew</span>
+                            <div className="flex items-center gap-2 text-[10px] text-foreground/60">
+                                <span className="text-accent font-semibold">250ml</span>
+                                <span>·</span>
+                                <span>9-Month Shelf Life</span>
+                            </div>
+                        </div>
+                    </motion.div>
+
+                    {/* Right: Spec Cards */}
+                    <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        {specs.map((item, i) => {
+                            const Icon = item.icon;
+                            return (
+                                <motion.div
+                                    key={item.label}
+                                    initial={{ opacity: 0, y: 15 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.4, delay: i * 0.08 }}
+                                    className="bg-white rounded-2xl p-5 sm:p-6 border border-black/10 shadow-xs flex flex-col justify-between"
+                                >
+                                    <div className="w-9 h-9 rounded-xl bg-[#F6F2EC] flex items-center justify-center text-foreground mb-4">
+                                        <Icon className="w-4 h-4 text-accent" />
+                                    </div>
+                                    <div>
+                                        <span className="text-[10px] font-heading font-bold uppercase tracking-wider text-foreground/50 block mb-1">
+                                            {item.label}
+                                        </span>
+                                        <h3 className="font-heading text-lg font-bold text-foreground mb-1.5">
+                                            {item.value}
+                                        </h3>
+                                        <p className="text-xs text-foreground/70 leading-relaxed font-normal">
+                                            {item.sub}
+                                        </p>
+                                    </div>
+                                </motion.div>
+                            );
+                        })}
+                    </div>
                 </div>
 
                 {/* How It Works Section: 3-Step Cold Brew Ritual */}

@@ -169,10 +169,10 @@ export default function SlideOverview() {
                                 className="relative w-full h-full"
                             >
                                 <Image
-                                    src="/images/cold-brew.png"
-                                    alt="Blob Coffee 250ml Aluminum Can"
+                                    src="/images/product-can.jpg"
+                                    alt="Blob Coffee 250ml Aluminum Can — Premium Cold Brew"
                                     fill
-                                    className="object-contain drop-shadow-xl"
+                                    className="object-contain drop-shadow-2xl"
                                     priority
                                 />
                             </motion.div>
